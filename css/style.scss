@@ -1,0 +1,259 @@
+/* version: 1.0 */
+/* Author: Pierre Rosier */
+
+/* VARIABLES */
+
+/* fonts */
+$font: 'josefin_sansregular';
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+/* colors */
+$txt-pink: hsl(0, 36%, 70%);
+$txt-black: hsl(0, 6%, 24%);
+$btn-error: hsl(0, 93%, 68%);
+
+
+/* GENERAL */
+
+@font-face {
+    font-family: 'josefin_sansregular';
+    src: url('../fonts/josefinsans-regular-webfont.eot');
+    src: url('../fonts/josefinsans-regular-webfont.eot?') format('embedded-opentype'),
+         url('../fonts/josefinsans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/josefinsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* INFO */
+
+.info {
+    width: 57.64%;
+    padding: 65px 15% 0 15%;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__picture--mobile {
+        display: none;
+    }
+
+    &__title {
+        margin: 120px 0 0 0;
+        font-family: $font;
+        font-size: 48px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        line-height: 51px;
+
+        &--pink {
+            font-weight: $light;
+            color: $txt-pink;
+        }
+
+        &--black {
+            font-weight: $bold;
+            color: $txt-black;
+        }
+    }
+
+    &__txt {
+        margin: 40px 0 0 0;
+        font-family: $font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $txt-pink;
+    }
+
+    &__wrap {
+
+        margin: 50px 0 0 0;
+
+        &>form {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 52px;
+        margin: 0;
+        padding: 0 0 0 30px;
+        border: solid 1px $txt-pink;
+        border-radius: 50px;
+        font-family: $font;
+        font-weight: $regular;
+        font-size: 16px;
+        color: $txt-pink;
+        text-align: left;
+        z-index: -1;
+
+        &::placeholder {
+            color: $txt-pink!important;
+        }
+    }
+
+    &__check {
+        width: 90px;
+        height: 52px;
+        position: absolute;
+        left: 37.50%;
+        margin: 0 auto;
+        padding: 0;
+        background: $txt-pink;
+        //background: linear-gradient(135deg, hsl(0, 80%, 86%)0%, hsl(0, 74%, 74%)100%);
+        background-image: url('../images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 10%;
+        background-position: center; 
+        border: solid 0 transparent;
+        border-radius: 50px;
+        box-shadow: 15px 15px 49px 0px rgba(189,49,49,0.4);
+        z-index: 2;
+    }
+
+    &__img {
+        display: none;
+
+        &--error {
+            display: block;
+            position: relative;
+            top: -35px;
+            left: 70.25%;
+        }
+    }
+
+    &__msg {
+        display: none;
+
+        &--error {
+            display: block;
+            margin: 0 0 0 30px;
+            font-family: $font;
+            font-size: 16px;
+            font-weight: $regular;
+            color: $txt-pink;
+        }
+    }
+
+    
+
+
+}
+
+
+/* PICTURE */
+
+.picture {
+    width: 42.36%;
+
+     &__desktop {
+        width: 100%;
+        height: auto;
+     }
+}
+
+/* FOOTER */
+
+.attribution { 
+
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and(max-width: 768px) {
+
+    /* MAIN */
+
+    main {
+        flex-direction: column-reverse;
+    }
+
+    /* INFO */
+
+    .info {
+        width: 100%;
+        padding: 40px 0 0 0;
+
+        &__logo {
+            padding: 0 10% 30px 10%;
+        }
+
+        &__picture--mobile {
+            display: block;
+            width: 100%;
+        }
+
+        &__title {
+            margin: 65px 0 0 0;
+            padding: 0 10%;
+            font-size: 30px;
+            line-height: 37px;
+            text-align: center;
+        }
+
+        &__txt {
+            margin: 24px 0 0 0;
+            padding: 0 10%;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &__btn {
+            width: 80%;
+            height: 52px;
+            margin: 0 10%;
+            padding: 0 0 0 30px;
+        }
+
+        &__check {
+            width: 90px;
+            height: 52px;
+            position: absolute;
+            left: 66.50%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        &__img {
+    
+            &--error {
+                top: -35px;
+                left: 58.25%;
+            }
+        }
+    }
+
+    /* PICTURE */
+
+    .picture {
+        width: 100%;
+
+        &__desktop {
+            display: none;
+        }
+    }
+}

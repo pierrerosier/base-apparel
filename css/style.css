@@ -1,0 +1,239 @@
+/* version: 1.0 */
+/* Author: Pierre Rosier */
+/* VARIABLES */
+/* fonts */
+/* colors */
+/* GENERAL */
+@font-face {
+  font-family: 'josefin_sansregular';
+  src: url("../fonts/josefinsans-regular-webfont.eot");
+  src: url("../fonts/josefinsans-regular-webfont.eot?") format("embedded-opentype"), url("../fonts/josefinsans-regular-webfont.woff2") format("woff2"), url("../fonts/josefinsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* MAIN */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+/* INFO */
+.info {
+  width: 57.64%;
+  padding: 65px 15% 0 15%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.info__picture--mobile {
+  display: none;
+}
+
+.info__title {
+  margin: 120px 0 0 0;
+  font-family: "josefin_sansregular";
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 51px;
+}
+
+.info__title--pink {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.info__title--black {
+  font-weight: 600;
+  color: #413a3a;
+}
+
+.info__txt {
+  margin: 40px 0 0 0;
+  font-family: "josefin_sansregular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ce9797;
+}
+
+.info__wrap {
+  margin: 50px 0 0 0;
+}
+
+.info__wrap > form {
+  margin: 0;
+  padding: 0;
+}
+
+.info__btn {
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 0 0 0 30px;
+  border: solid 1px #ce9797;
+  border-radius: 50px;
+  font-family: "josefin_sansregular";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ce9797;
+  text-align: left;
+  z-index: -1;
+}
+
+.info__btn::-webkit-input-placeholder {
+  color: #ce9797 !important;
+}
+
+.info__btn:-ms-input-placeholder {
+  color: #ce9797 !important;
+}
+
+.info__btn::-ms-input-placeholder {
+  color: #ce9797 !important;
+}
+
+.info__btn::placeholder {
+  color: #ce9797 !important;
+}
+
+.info__check {
+  width: 90px;
+  height: 52px;
+  position: absolute;
+  left: 37.50%;
+  margin: 0 auto;
+  padding: 0;
+  background: #ce9797;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: center;
+  border: solid 0 transparent;
+  border-radius: 50px;
+  -webkit-box-shadow: 15px 15px 49px 0px rgba(189, 49, 49, 0.4);
+          box-shadow: 15px 15px 49px 0px rgba(189, 49, 49, 0.4);
+  z-index: 2;
+}
+
+.info__img {
+  display: none;
+}
+
+.info__img--error {
+  display: block;
+  position: relative;
+  top: -35px;
+  left: 70.25%;
+}
+
+.info__msg {
+  display: none;
+}
+
+.info__msg--error {
+  display: block;
+  margin: 0 0 0 30px;
+  font-family: "josefin_sansregular";
+  font-size: 16px;
+  font-weight: 400;
+  color: #ce9797;
+}
+
+/* PICTURE */
+.picture {
+  width: 42.36%;
+}
+
+.picture__desktop {
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 768px) {
+  /* MAIN */
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  /* INFO */
+  .info {
+    width: 100%;
+    padding: 40px 0 0 0;
+  }
+  .info__logo {
+    padding: 0 10% 30px 10%;
+  }
+  .info__picture--mobile {
+    display: block;
+    width: 100%;
+  }
+  .info__title {
+    margin: 65px 0 0 0;
+    padding: 0 10%;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+  }
+  .info__txt {
+    margin: 24px 0 0 0;
+    padding: 0 10%;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .info__btn {
+    width: 80%;
+    height: 52px;
+    margin: 0 10%;
+    padding: 0 0 0 30px;
+  }
+  .info__check {
+    width: 90px;
+    height: 52px;
+    position: absolute;
+    left: 66.50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .info__img--error {
+    top: -35px;
+    left: 58.25%;
+  }
+  /* PICTURE */
+  .picture {
+    width: 100%;
+  }
+  .picture__desktop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
